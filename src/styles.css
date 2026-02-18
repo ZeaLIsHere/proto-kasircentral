@@ -1,0 +1,329 @@
+:root {
+  --kc-green-dark: #0f4f1f;
+  --kc-green: #1f7a35;
+  --kc-green-light: #43a055;
+  --kc-bg: #f8f9fa;
+  --kc-glass-bg: rgba(255, 255, 255, 0.95);
+  --kc-glass-border: rgba(0, 0, 0, 0.1);
+  --kc-text-main: #212529;
+  --kc-text-muted: #6c757d;
+  --kc-input-bg: rgba(255, 255, 255, 0.95);
+  --kc-product-grid-cols: 4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--kc-bg);
+  color: var(--kc-text-main);
+  font-size: 19.5px;
+}
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.kc-glass-card {
+  background: var(--kc-glass-bg);
+  border-radius: 18px;
+  border: 1px solid var(--kc-glass-border);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-left: 4px solid var(--kc-green);
+  color: var(--kc-text-main);
+}
+
+.kc-auth-card {
+  max-width: 494px;
+  margin: 80px auto;
+  padding: 31.2px 26px 26px;
+}
+
+.kc-auth-card h1 {
+  margin: 0 0 20.8px;
+  font-size: 28.6px;
+}
+
+.kc-label {
+  display: block;
+  font-size: 18.2px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.kc-input {
+  width: 100%;
+  padding: 13px 15.6px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: var(--kc-input-bg);
+  color: var(--kc-text-main);
+  font-size: 19.5px;
+}
+
+.kc-input:focus {
+  outline: none;
+  border-color: var(--kc-green);
+  box-shadow: 0 0 0 1px rgba(31, 122, 53, 0.3);
+}
+
+.kc-button-primary {
+  width: 100%;
+  padding: 15.6px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, var(--kc-green-light), var(--kc-green));
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 19.5px;
+  cursor: pointer;
+  transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, opacity 0.12s ease-out;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+}
+
+.kc-button-primary:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.kc-button-primary:not(:disabled):active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.kc-text-small {
+  font-size: 18.2px;
+}
+
+.kc-link-inline a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+header.kc-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: var(--kc-green);
+  color: #ffffff;
+}
+
+.kc-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.kc-logo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.kc-logo-sm {
+  height: 34px;
+}
+
+.kc-app-title {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 23.4px;
+}
+
+.kc-nav-links {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.kc-nav-links a {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 19.5px;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 999px;
+  transition: background-color 0.15s ease-out;
+}
+
+.kc-nav-links a:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.kc-nav-user {
+  margin-left: 12px;
+  font-size: 16.9px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.kc-nav-logout {
+  padding: 7.8px 15.6px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: transparent;
+  color: var(--kc-text-main);
+  cursor: pointer;
+  font-size: 16.9px;
+  transition: background-color 0.15s ease-out, transform 0.1s ease-out;
+}
+
+.kc-nav-logout:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.kc-nav-logout:active {
+  transform: scale(0.97);
+}
+
+main.kc-main {
+  flex: 1;
+  padding: 13px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .kc-auth-card {
+    max-width: 90%;
+    padding: 20px 16px 16px;
+  }
+
+  .kc-auth-card h1 {
+    font-size: 24px;
+  }
+
+  .kc-label {
+    font-size: 15px;
+  }
+
+  .kc-input {
+    font-size: 16px;
+    padding: 12px 14px;
+  }
+
+  .kc-button-primary {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .kc-nav-links a {
+    font-size: 16px;
+  }
+
+  .kc-app-title {
+    font-size: 20px;
+  }
+
+  .kc-nav-user {
+    font-size: 14px;
+  }
+
+  .kc-nav-logout {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  main.kc-main {
+    padding: 8px;
+  }
+
+  .kc-glass-card {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  :root {
+    --kc-product-grid-cols: 2;
+  }
+
+  .kc-auth-card {
+    padding: 16px 12px 12px;
+  }
+
+  .kc-auth-card h1 {
+    font-size: 20px;
+  }
+
+  .kc-label {
+    font-size: 14px;
+  }
+
+  .kc-input {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+
+  .kc-button-primary {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .kc-nav-links a {
+    font-size: 14px;
+  }
+
+  .kc-app-title {
+    font-size: 18px;
+  }
+
+  .kc-nav-user {
+    font-size: 12px;
+  }
+
+  .kc-nav-logout {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  main.kc-main {
+    padding: 6px;
+  }
+
+  .kc-glass-card {
+    padding: 10px;
+  }
+
+  .kc-logo-sm {
+    height: 28px;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --kc-product-grid-cols: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .kc-auth-card {
+    margin: 40px 16px;
+  }
+
+  header.kc-navbar {
+    padding: 8px 12px;
+  }
+}
