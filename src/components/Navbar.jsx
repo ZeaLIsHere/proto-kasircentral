@@ -22,7 +22,7 @@ function Navbar() {
     <header className="kc-navbar">
       <div className="kc-nav-left">
         <div>
-          <img src="/src/public/Logo central.jpeg" alt="Logo" className="kc-logo kc-logo-sm" />
+          <img src="/logo-central.svg" alt="Logo" className="kc-logo kc-logo-sm" />
         </div>
         <div className="kc-app-title">KasirCentral</div>
       </div>
