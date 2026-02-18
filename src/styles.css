@@ -117,12 +117,16 @@ header.kc-navbar {
   -webkit-backdrop-filter: blur(12px);
   background: var(--kc-green);
   color: #ffffff;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: auto;
 }
 
 .kc-nav-left {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: auto;
 }
 
 .kc-logo {
@@ -202,6 +206,10 @@ main.kc-main {
     font-size: 16px;
   }
 
+  :root {
+    --kc-product-grid-cols: 3;
+  }
+
   .kc-auth-card {
     max-width: 90%;
     padding: 20px 16px 16px;
@@ -225,20 +233,27 @@ main.kc-main {
     padding: 14px;
   }
 
+  .kc-nav-links {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
   .kc-nav-links a {
-    font-size: 16px;
+    font-size: 13px;
+    padding: 3px 6px;
   }
 
   .kc-app-title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .kc-nav-user {
-    font-size: 14px;
+    font-size: 12px;
+    margin-left: 6px;
   }
 
   .kc-nav-logout {
-    font-size: 14px;
+    font-size: 12px;
     padding: 6px 10px;
   }
 
@@ -248,6 +263,14 @@ main.kc-main {
 
   .kc-glass-card {
     padding: 12px;
+  }
+
+  header.kc-navbar {
+    padding: 8px 12px;
+  }
+
+  .kc-logo-sm {
+    height: 30px;
   }
 }
 
@@ -282,20 +305,27 @@ main.kc-main {
     padding: 12px;
   }
 
+  .kc-nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
   .kc-nav-links a {
-    font-size: 14px;
+    font-size: 12px;
+    padding: 3px 6px;
   }
 
   .kc-app-title {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .kc-nav-user {
-    font-size: 12px;
+    display: none;
   }
 
   .kc-nav-logout {
-    font-size: 12px;
+    font-size: 11px;
     padding: 4px 8px;
   }
 
@@ -308,13 +338,34 @@ main.kc-main {
   }
 
   .kc-logo-sm {
-    height: 28px;
+    height: 26px;
+  }
+
+  header.kc-navbar {
+    padding: 6px 10px;
   }
 }
 
 @media (max-width: 360px) {
   :root {
     --kc-product-grid-cols: 1;
+  }
+
+  .kc-app-title {
+    font-size: 14px;
+  }
+
+  .kc-nav-links a {
+    font-size: 11px;
+    padding: 2px 4px;
+  }
+
+  .kc-logo-sm {
+    height: 24px;
+  }
+
+  header.kc-navbar {
+    gap: 4px;
   }
 }
 
