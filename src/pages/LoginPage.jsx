@@ -40,7 +40,7 @@ function LoginPage() {
       {/* Logo Section */}
       <div style={{ textAlign: 'center', marginBottom: '5px' }}>
         <img 
-          src="/logo-central.svg" 
+          src="/Logo central.jpeg" 
           alt="KasirCentral Logo" 
           style={{ 
             height: '100px', 
